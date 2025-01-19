@@ -66,30 +66,25 @@ var OPDashboardStats = {"pid":"11","pageview_record_id":null,"rest_url":"https:\
 <script src="js/page-11.nodelay.js" id="op3-frontend-scripts-nodelay-js"></script>
 <script src="js/page-11.js" id="op3-frontend-scripts-main-js"></script>
 <script>
-    // Impede o comportamento de overflow desnecessário
     document.addEventListener('DOMContentLoaded', function () {
-        // Garante que o body e o html tenham overflow configurado corretamente
-        document.body.style.overflowX = 'hidden';
-        document.body.style.overflowY = 'auto';
+        // Garante que o body e o html permitam scroll vertical
+        document.body.style.overflowX = 'hidden'; // Evita rolagem horizontal
+        document.body.style.overflowY = 'auto';  // Garante rolagem vertical
         document.documentElement.style.overflowX = 'hidden';
         document.documentElement.style.overflowY = 'auto';
 
-        // Corrige o problema de scroll bloqueado em dispositivos móveis
-        document.body.addEventListener('touchmove', function (event) {
-            if (event.target.closest('.scrollable')) {
-                return; // Permite scroll em elementos específicos com a classe "scrollable"
+        // Corrige overscroll em dispositivos móveis (iOS especialmente)
+        document.addEventListener('touchmove', function (event) {
+            // Permite o scroll somente quando necessário
+            if (!event.target.closest('body')) {
+                event.preventDefault(); // Previne overscroll fora do conteúdo
             }
-            event.preventDefault();
         }, { passive: false });
 
-        console.log('Scroll configurado corretamente.');
-    });
-
-    // Opcional: Remove listeners se necessário
-    window.addEventListener('beforeunload', function () {
-        document.body.removeEventListener('touchmove', null);
+        console.log('Scroll no mobile configurado.');
     });
 </script>
+
 
 
 

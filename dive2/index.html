@@ -90,6 +90,18 @@ var OPDashboardStats = {"pid":"11","pageview_record_id":null,"rest_url":"https:\
     });
 </script>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const stickyElements = document.querySelectorAll('[data-op3-sticky="0"]');
+        stickyElements.forEach(element => {
+            element.style.position = 'static';
+            element.style.top = 'auto';
+        });
+        console.log('Sticky behavior disabled.');
+    });
+</script>
+
+
 
 
 

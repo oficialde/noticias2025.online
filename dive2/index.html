@@ -52,7 +52,18 @@ var OPDashboardStats = {"pid":"11","pageview_record_id":null,"rest_url":"https:\
 @font-face{font-family:Cardo;font-style:italic;font-weight:400;font-display:fallback;src:url('fonts/cardo_italic_400.woff2') format('woff2');}
 @font-face{font-family:Cardo;font-style:normal;font-weight:700;font-display:fallback;src:url('fonts/cardo_normal_700.woff2') format('woff2');}
 </style>
-<style id="op3-custom-css"></style><script src="js/wp-emoji-release.min.js" defer=""></script><script src="https://divertidamente2.site/wp-includes/js/wp-emoji-release.min.js?ver=6.5.5" defer=""></script><script src="https://divertidamente2.site/wp-includes/js/wp-emoji-release.min.js?ver=6.5.5" defer=""></script><script src="https://divertidamente2.site/wp-includes/js/wp-emoji-release.min.js?ver=6.5.5" defer=""></script></head>
+<style id="op3-custom-css"></style>html, body {
+    height: 100%; /* Garante que ocupem toda a altura da viewport */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    overflow-y: auto; /* Permite rolagem vertical */
+    -webkit-overflow-scrolling: touch; /* Rola suavemente em iOS */
+}
+
+.scrollable {
+    overflow-y: auto; /* Permite rolagem dentro de áreas específicas */
+    -webkit-overflow-scrolling: touch; /* Suavidade em mobile */
+}
+<script src="js/wp-emoji-release.min.js" defer=""></script><script src="https://divertidamente2.site/wp-includes/js/wp-emoji-release.min.js?ver=6.5.5" defer=""></script><script src="https://divertidamente2.site/wp-includes/js/wp-emoji-release.min.js?ver=6.5.5" defer=""></script><script src="https://divertidamente2.site/wp-includes/js/wp-emoji-release.min.js?ver=6.5.5" defer=""></script></head>
 
 <body class="home page-template page-template-op_builder_blank page page-id-11 wp-embed-responsive" cz-shortcut-listen="true">
 
@@ -67,23 +78,24 @@ var OPDashboardStats = {"pid":"11","pageview_record_id":null,"rest_url":"https:\
 <script src="js/page-11.js" id="op3-frontend-scripts-main-js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Garante que o body e o html permitam scroll vertical
-        document.body.style.overflowX = 'hidden'; // Evita rolagem horizontal
-        document.body.style.overflowY = 'auto';  // Garante rolagem vertical
+        // Garante que html e body suportem scroll
+        document.body.style.overflowX = 'hidden';
+        document.body.style.overflowY = 'auto';
         document.documentElement.style.overflowX = 'hidden';
         document.documentElement.style.overflowY = 'auto';
 
-        // Corrige overscroll em dispositivos móveis (iOS especialmente)
-        document.addEventListener('touchmove', function (event) {
-            // Permite o scroll somente quando necessário
-            if (!event.target.closest('body')) {
-                event.preventDefault(); // Previne overscroll fora do conteúdo
+        // Remove qualquer listener de touchmove que impeça o scroll
+        document.body.addEventListener('touchmove', function (event) {
+            if (event.cancelable) {
+                event.stopPropagation();
             }
-        }, { passive: false });
+        }, { passive: true });
 
-        console.log('Scroll no mobile configurado.');
+        // Observa possíveis elementos que bloqueiam o scroll
+        console.log('Scroll no mobile está configurado.');
     });
 </script>
+
 
 
 

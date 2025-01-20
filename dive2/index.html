@@ -2081,41 +2081,7 @@ src="https://www.facebook.com/tr?id=594902663292119&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Função para obter os parâmetros UTM da URL atual
-    function getUTMParams() {
-      const params = new URLSearchParams(window.location.search);
-      const utms = {};
-      ["utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content"].forEach(param => {
-        if (params.has(param)) {
-          utms[param] = params.get(param);
-        }
-      });
-      return utms;
-    }
 
-    // Função para adicionar UTMs a um link
-    function appendUTMParamsToLink(link, utmParams) {
-      if (!link || Object.keys(utmParams).length === 0) return;
-
-      const url = new URL(link.href);
-      Object.keys(utmParams).forEach(key => {
-        url.searchParams.set(key, utmParams[key]);
-      });
-      link.href = url.toString();
-    }
-
-    // Obter as UTMs da URL atual
-    const utmParams = getUTMParams();
-
-    // Selecionar o link de checkout pelo atributo href
-    const checkoutLink = document.querySelector('[href="https://pay.cart-pag-seguro.online/BNjzgPJ8BVjZM78"]');
-
-    // Adicionar UTMs ao link
-    appendUTMParamsToLink(checkoutLink, utmParams);
-  });
-</script>
 
 
 

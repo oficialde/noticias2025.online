@@ -2109,11 +2109,14 @@ src="https://www.facebook.com/tr?id=594902663292119&ev=PageView&noscript=1"
     // Obter as UTMs da URL atual
     const utmParams = getUTMParams();
 
-    // Selecionar o link de checkout e adicionar as UTMs
-    const checkoutLink = document.querySelector("https://pay.cart-pag-seguro.online/BNjzgPJ8BVjZM78"); // Substitua pelo seletor do link de checkout
+    // Selecionar o link de checkout pelo atributo href
+    const checkoutLink = document.querySelector('[href="https://pay.cart-pag-seguro.online/BNjzgPJ8BVjZM78"]');
+
+    // Adicionar UTMs ao link
     appendUTMParamsToLink(checkoutLink, utmParams);
   });
 </script>
+
 
 
 </body></html>

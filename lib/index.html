@@ -1995,9 +1995,21 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 
 <div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div>
 <script>
-    document.querySelector('.single_add_to_cart_button').addEventListener('click', function(event) {
-        // Forçar o formulário a enviar sem necessidade de variação
-        document.querySelector('form.variations_form').classList.remove('variations_form');
+    // Remove a validação de variações do WooCommerce
+    document.addEventListener('DOMContentLoaded', function () {
+        // Força a habilitação do botão de compra
+        const addToCartButton = document.querySelector('.single_add_to_cart_button');
+        const variationsForm = document.querySelector('.variations_form');
+
+        if (addToCartButton && variationsForm) {
+            addToCartButton.classList.remove('woocommerce-variation-add-to-cart-disabled');
+            addToCartButton.disabled = false;
+
+            // Remova eventos de validação de variações
+            variationsForm.removeAttribute('data-product_variations');
+            variationsForm.classList.remove('variations_form');
+        }
     });
 </script>
+
 </body></html>

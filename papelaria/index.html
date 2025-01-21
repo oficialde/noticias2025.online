@@ -1859,6 +1859,30 @@ Surpresas temáticas que vão encantar fãs de todas as idades, incluindo chavei
 	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
 	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
 </script>
+<script 
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  async
+  defer>
+</script>
+<script>
+  window.pixelId = "66ee34890509c4b464066ade";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+<script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
 <script type="text/template" id="tmpl-unavailable-variation-template">
 	<p role="alert">Desculpe, este produto não está disponível. Escolha uma combinação diferente.</p>
 </script>
@@ -2049,32 +2073,6 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
     });
 </script>
 
-<script 
-  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-  async
-  defer>
-</script>
-<script>
-  window.pixelId = "66ee34890509c4b464066ade";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
-</script>
-35:21
 
-
-<script>
-    window.onload = function () {
-        var links = document.getElementsByTagName("a");
-        for (var i = 0, n = links.length; i < n; i++) {
-            var href = links[i].href.trim() +
-                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
-                    document.location.search.replace('?', '').toString();
-            links[i].href = href;
-        }
-    }
-</script>
 
 </body></html>

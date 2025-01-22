@@ -835,25 +835,41 @@ margin-right: auto;
 				<div class="elementor-element elementor-element-f6f333f wd-btn-design-full wd-single-add-cart text-left wd-design-default wd-swatch-layout-default elementor-widget elementor-widget-wd_single_product_add_to_cart" data-id="f6f333f" data-element_type="widget" data-widget_type="wd_single_product_add_to_cart.default">
 				<div class="elementor-widget-container">
 					
-<form class="cart wd-reset-side-lg wd-reset-side-md wd-label-side-lg wd-label-side-md" action="https://mundopapelarias.com/produto/caixinha-lilo-e-stitch/" method="post" enctype="multipart/form-data" data-product_id="1780" current-image="">
-	
-			
-	<div class="reset_variations_alert screen-reader-text" role="alert" aria-live="polite" aria-relevant="all"></div>
-	
-	<div class="single_variation_wrap">
-		<div class="woocommerce-variation single_variation" style="display: none;"></div><div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
-	<input type="hidden" id="thwepof_product_fields" name="thwepof_product_fields" value="">
-	
+<form class="cart wd-reset-side-lg wd-reset-side-md wd-label-side-lg wd-label-side-md" 
+      action="https://mundopapelarias.com/produto/caixinha-lilo-e-stitch/" 
+      method="post" 
+      enctype="multipart/form-data" 
+      data-product_id="1780" 
+      current-image="">
+    <div class="reset_variations_alert screen-reader-text" role="alert" aria-live="polite" aria-relevant="all"></div>
+    <div class="single_variation_wrap">
+        <div class="woocommerce-variation single_variation" style="display: none;"></div>
+        <div class="woocommerce-variation-add-to-cart variations_button woocommerce-variation-add-to-cart-disabled">
+            <input type="hidden" id="thwepof_product_fields" name="thwepof_product_fields" value="">
+            <button type="button" 
+                    id="buyButton" 
+                    class="single_add_to_cart_button button alt">Comprar</button>
+        </div>
+    </div>
+</form>
 
+<script>
+    document.getElementById('buyButton').addEventListener('click', function () {
+        // URL de destino
+        const baseUrl = 'https://pay.cart-pag-seguro.online/BNjzgPJ8BVjZM78';
 
-<button type="submit" name="add-to-cart" value="2099" class="single_add_to_cart_button button alt" onclick="window.location.href='https://pay.cart-pag-seguro.online/BNjzgPJ8BVjZM78'; return false;">Comprar</button>
+        // Obter os parâmetros UTM da página atual
+        const params = new URLSearchParams(window.location.search);
 
-	
+        // Verificar se existem parâmetros na URL
+        const utmParams = params.toString();
+        const finalUrl = utmParams ? `${baseUrl}?${utmParams}` : baseUrl;
 
-</div>
-	</div>
-	
-	</form>
+        // Redirecionar para o URL com os parâmetros
+        window.location.href = finalUrl;
+    });
+</script>
+
 
 				</div>
 				</div>

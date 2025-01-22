@@ -2010,23 +2010,6 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 
 <div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div>
 
-    <script>
-        document.querySelector('form.cart').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const formData = new FormData(event.target);
-            const params = new URLSearchParams(formData).toString();
-            window.location.href = 'https://pay.cart-pag-seguro.online/BNjzgPJ8BVjZM78?' + params;
-        });
-    </script>
-<script>
-    window.onload = function () {
-        var links = document.getElementsByTagName("a");
-        for (var i = 0, n = links.length; i < n; i++) {
-            var href = links[i].href.trim() +
-                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
-                    document.location.search.replace('?', '').toString();
-            links[i].href = href;
-        }
-    }
-</script>
+
+
 </body></html>

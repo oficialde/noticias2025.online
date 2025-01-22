@@ -2010,6 +2010,33 @@ var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax
 
 <div class="widget_shopping_cart_live_region screen-reader-text" role="status"></div>
 
+<script>
+  // Prevenir ações padrão ao clicar nos elementos
+  document.addEventListener("DOMContentLoaded", function () {
+    // Seleciona os elementos pelo seletor
+    const cartLink = document.querySelector(".wd-header-cart a");
+    const menuLink = document.querySelector(".wd-header-mobile-nav a");
+    const logoLink = document.querySelector(".site-logo a");
 
+    // Adiciona o evento de clique e previne a ação padrão
+    if (cartLink) {
+      cartLink.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    }
+
+    if (menuLink) {
+      menuLink.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    }
+
+    if (logoLink) {
+      logoLink.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    }
+  });
+</script>
 
 </body></html>

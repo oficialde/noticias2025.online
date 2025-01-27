@@ -1272,18 +1272,18 @@ p.header-widget-phone {
 }
 
 #hero-1 {
-  background-image: url(../images/hero-1.jpg);
+  background-image: url(../images/hero-1.html);
   padding-top: 30px;
 }
 
 #hero-4 {
-  background-image: url(../images/hero-4.jpg);
+  background-image: url(../images/hero-4.html);
   padding-top: 80px;
   padding-bottom: 40px;
 }
 
 #hero-5 {
-  background-image: url(../images/hero-5.jpg);
+  background-image: url(../images/hero-5.html);
   padding-top: 90px;
   padding-bottom: 210px;
 }
@@ -1424,16 +1424,16 @@ p.header-widget-phone {
 }
 
 #carousel-slide-1 {
-  background-image: url(../images/slide-1.jpg); 
+  background-image: url(../images/slide-1.html); 
   background-position: top center;
 }
 
 #carousel-slide-2 {
-  background-image: url(../images/slide-2.jpg); 
+  background-image: url(../images/slide-2.html); 
 }
 
 #carousel-slide-3 {
-  background-image: url(../images/slide-3.jpg); 
+  background-image: url(../images/slide-3.html); 
 }
 
 #heroCarousel .mask {
@@ -1461,11 +1461,11 @@ p.header-widget-phone {
 }
 
 .carousel-control-next-icon {
-  background-image: url(../images/next.svg);
+  background-image: url(../images/next.html);
 }
 
 .carousel-control-prev-icon {
-  background-image: url(../images/prev.svg);
+  background-image: url(../images/prev.html);
 }
 
 .carousel-control-next { 
@@ -1868,7 +1868,7 @@ p.header-widget-phone {
 }
 
 .hero-12-img { 
-  background-image: url(../images/hero-12-img.jpg);
+  background-image: url(../images/hero-12-img.html);
   background-repeat: no-repeat;
   background-position: center center;   
   background-size: cover;
@@ -2107,7 +2107,7 @@ td.text-right {
   =========================================================================== */
 
 #services-6 {
-  background-image: url(../images/banner-2.jpg);
+  background-image: url(../images/banner-2.html);
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;   
@@ -2555,7 +2555,7 @@ td.text-right {
   =========================================================================== */
 
 #info-5 {
-   background-image: url(../images/info-5.jpg);
+   background-image: url(../images/info-5.html);
 }
 
 #info-6,
@@ -2715,7 +2715,7 @@ td.text-right {
 }
 
 .info-7-img { 
-  background-image: url(../images/info-7.jpg);
+  background-image: url(../images/info-7.html);
   background-repeat: no-repeat;
   background-position: center center;   
   background-size: cover;
@@ -2727,7 +2727,7 @@ td.text-right {
 }
 
 .info-8-img { 
-  background-image: url(../images/info-8.jpg);
+  background-image: url(../images/info-8.html);
   background-repeat: no-repeat;
   background-position: center center;   
   background-size: cover;
@@ -2739,7 +2739,7 @@ td.text-right {
 }
 
 .info-9-img { 
-  background-image: url(../images/info-9.jpg);
+  background-image: url(../images/info-9.html);
   background-repeat: no-repeat;
   background-position: center center;   
   background-size: cover;
@@ -3365,7 +3365,7 @@ td.text-right {
 /*------------------------------------------*/
 
 #doctor-breadcrumbs {
-  background-image: url(../images/doctor-profile.jpg);
+  background-image: url(../images/doctor-profile.html);
   padding-top: 130px;
   padding-bottom: 60px;
 }
@@ -3831,13 +3831,13 @@ td.text-right {
   =========================================================================== */
 
 #banner-1 {
-  background-image: url(../images/banner-1.jpg);
+  background-image: url(../images/banner-1.html);
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
 #banner-2 .bg-image.bg-inner {
-  background-image: url(../images/banner-2.jpg);
+  background-image: url(../images/banner-2.html);
   position: relative;
   z-index: 1;
 }
@@ -3850,19 +3850,19 @@ td.text-right {
 }
 
 #banner-6 {
-  background-image: url(../images/banner-6.jpg);
+  background-image: url(../images/banner-6.html);
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
 #banner-7 {
-  background-image: url(../images/banner-7.jpg);
+  background-image: url(../images/banner-7.html);
   padding-top: 120px;
   padding-bottom: 120px;
 }
 
 #banner-8 {
-  background-image: url(../images/banner-8.jpg);
+  background-image: url(../images/banner-8.html);
   padding-top: 100px;
   padding-bottom: 100px;
 }
@@ -4027,7 +4027,7 @@ td.text-right {
 }
 
 .banner-4-img { 
-  background-image: url(../images/banner-4.jpg);
+  background-image: url(../images/banner-4.html);
   background-repeat: no-repeat;
   background-position: center center;   
   background-size: cover;
@@ -4431,7 +4431,7 @@ a.share-ico.ico-pinterest { background-color: #cb2027; color: #fff; }
   =========================================================================== */
 
 #contacts-1.bg-image {
-  background-image: url(../images/contacts-1.jpg);
+  background-image: url(../images/contacts-1.html);
 }
 
 /*------------------------------------------*/
@@ -4616,7 +4616,7 @@ p.contact-notice {
 }
 
 .footer.bg-image {
-  background-image: url(../images/footer-bg.jpg);
+  background-image: url(../images/footer-bg.html);
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;   
@@ -5155,7 +5155,7 @@ ul.blog-category-list li:hover {
   =========================================================================== */
 
 #breadcrumb {
-  background-image: url(../images/breadcrumb.jpg);
+  background-image: url(../images/breadcrumb.html);
   background-position: center center;
 }
 

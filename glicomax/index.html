@@ -1,0 +1,1003 @@
+<!DOCTYPE html><!-- MedService - Medical & Medical Health Landing Page Template design by Jthemes --><!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]--><!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]--><!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]--><!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><head>
+    
+    <script>
+    var timer = setInterval(function () {
+        const location = new URL(document.location.href);
+        const fields = ["src", "sck", "utm_source", "utm_medium", "utm_campaign", "utm_content", "utm_term"];
+        var links = document.getElementsByTagName("a");
+
+        for (var i = 0, n = links.length; i < n; i++) {
+            if (links[i].href.includes("#")) continue;
+            if (links[i].href) {
+                let link = new URL(links[i].href);
+                fields.forEach(field => {
+                    if (location.searchParams.get(field))
+                        link.searchParams.set(field, location.searchParams.get(field));
+                });
+                let href = link.href;
+                links[i].href = href;
+            }
+        }
+    }, 500);
+</script>
+
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="author" content="Jthemes">	
+		<meta name="description" content="MedService - Medical & Medical Health Landing Page Template">
+		<meta name="keywords" content="Responsive, HTML5 Template, Jthemes, One Page, Landing, Medical, Health, Healthcare, Doctor, Clinic, Care, Hospital">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="" async="" defer=""></script>		
+  		<!-- SITE TITLE -->
+		<title>GlicoMax</title>
+							
+		<!-- FAVICON AND TOUCH ICONS  -->
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+		<!-- GOOGLE FONTS -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet"> 	
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet"> 
+
+		<!-- BOOTSTRAP CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+				
+		<!-- FONT ICONS -->
+		<link href="css/all.css" rel="stylesheet" crossorigin="anonymous">		
+		<link href="css/flaticon.css" rel="stylesheet">
+
+		<!-- PLUGINS STYLESHEET -->
+		<link href="css/menu.css" rel="stylesheet">	
+		<link id="effect" href="css/fade-down.css" media="all" rel="stylesheet">
+		<link href="css/magnific-popup.css" rel="stylesheet">	
+		<link href="css/owl.carousel.min.css" rel="stylesheet">
+		<link href="css/owl.theme.default.min.css" rel="stylesheet">
+		<link href="css/animate.css" rel="stylesheet">
+		<link href="css/jquery.datetimepicker.min.css" rel="stylesheet">
+				
+		<!-- TEMPLATE CSS -->
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- RESPONSIVE CSS -->
+		<link href="css/responsive.css" rel="stylesheet"> 
+	
+	</head>
+
+
+
+
+	<body>
+
+
+
+
+		<!-- PRELOADER SPINNER
+		============================================= -->	
+		<div id="loader-wrapper">
+			<div id="loader"><div class="loader-inner"></div></div>
+		</div>
+
+
+
+
+		
+
+
+
+
+		<!-- PAGE CONTENT
+		============================================= -->	
+		<div id="page" class="page">
+
+
+
+
+			<!-- HEADER
+			============================================= -->
+			<header id="header" class="header">
+
+
+				<!-- MOBILE HEADER -->
+			    <div class="wsmobileheader clearfix">
+			    	
+			    	<span class="smllogo"><img src="images/logo-grey.png" width="180" height="40" alt="mobile-logo"></span>
+			    	<a href="tel:11998076821" class="callusbtn"><i class="fas fa-phone"></i></a>
+			 	</div>
+
+			  	<!-- NAVIGATION MENU -->
+			  	<div class="wsmainfull menu clearfix">
+    				<div class="wsmainwp clearfix">
+
+    					<!-- LOGO IMAGE -->
+    					<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80 pixels) -->
+    					<div class="desktoplogo"><a href="#hero-1"><img src="images/logo-grey.png" width="180" height="40" alt="header-logo"></a></div>
+
+    					<!-- MAIN MENU -->
+      					
+
+    				</div>
+    			</div>	<!-- END NAVIGATION MENU -->
+
+
+			</header>	<!-- END HEADER -->
+
+			<!-- ABOUT-5
+			============================================= -->
+			<section id="about-5" class="pt-100 about-section division">
+				<div class="container">
+					<div class="row d-flex align-items-center">
+
+						<!-- TEXT BLOCK -->	
+						<div class="col-lg-6">
+							<div class="txt-block pc-30 wow fadeInUp" data-wow-delay="0.4s">
+
+								<!-- Section ID -->	
+					 			<span class="section-id blue-color">CERTIFICADO E APROVADO PELA ANVISA</span>
+
+								<!-- Title -->
+								<h3 class="h3-md steelblue-color">O MEDIDOR DE GLICOSE MAIS PRECISO E MENOS INVASIVO DO BRASIL!</h3>
+
+								<!-- Text -->
+								<p>Diga adeus a ter que furar o dedo sempre que for medir sua glicose! Com o nosso GlicoMax™ você monitora sua glicose de forma saudável, prática e sem picadas!</p>
+
+								<!-- Singnature -->
+								<div class="singnature mt-35">
+
+									<!-- Text -->
+									<p class="p-small mb-15">- Siemens Healthineers</p>
+
+									<!-- Singnature Image -->
+									<!-- Recommended sizes for Retina Ready displays is 400x68px; -->
+									<img class="img-fluid" src="images/signature.png" width="200" height="34" alt="signature-image">	
+
+								</div>
+<!-- IMAGE BLOCK -->
+						<div class="col-lg-6">
+							<div class="about-img text-center wow fadeInUp" data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/image-03.png" alt="about-image">
+							</div>
+						</div>
+							</div>
+						</div>	<!-- END TEXT BLOCK -->	
+
+						
+					</div>    <!-- End row -->
+				</div>	   <!-- End container -->
+			</section>	<!-- END ABOUT-5 -->
+
+
+
+
+			<!-- SERVICES-3
+			============================================= -->
+			<section id="services-3" class="bg-lightgrey wide-100 services-section division">
+				<div class="container">
+
+
+					<!-- SECTION TITLE -->	
+					<div class="row">	
+						<div class="col-lg-10 offset-lg-1 section-title">		
+
+							<!-- Title 	-->	
+							<h3 class="h3-md steelblue-color">Controle total sobre a sua diabetes</h3>
+
+							<!-- Text -->
+							<p>GlicoMax™ é a segurança e praticidade que você merece!</p>
+										
+						</div> 
+					</div>
+				
+					
+					<!-- SERVICES CONTENT -->
+					<div class="row">
+						<div class="col-md-12">					
+							<div class="owl-carousel owl-theme services-holder">
+
+						
+								<!-- SERVICE BOX #1 -->
+								<div class="sbox-3 icon-sm">
+
+									<!-- Icon -->
+									<div class="sbox-3-icon">
+										<span class="flaticon-083-stethoscope"></span>
+									</div>
+										
+									<!-- Title -->
+									<h5 class="h5-xs steelblue-color">Monitoramento</h5>
+
+									<!-- Text -->
+									<p>Monitora sua glicose e avisa sobre sua saúde em tempo real
+									</p>
+																																						
+								</div>
+
+
+								<!-- SERVICE BOX #2 -->
+								
+								<div class="sbox-3 icon-sm">
+
+									<!-- Icon -->
+									<div class="sbox-3-icon">
+										<span class="flaticon-015-blood-donation-1"></span>
+									</div>
+										
+									<!-- Title -->
+									<h5 class="h5-xs steelblue-color">Precisão</h5>
+
+									<!-- Text -->
+									<p>Fácil de usar e precisão de 99.9% nos resultados dos exames
+									</p>
+																																						
+								</div>
+
+								<!-- SERVICE BOX #5 -->
+								<div class="sbox-3 icon-sm">
+
+									<!-- Icon -->
+									<div class="sbox-3-icon">
+										<span class="flaticon-060-cardiogram-4"></span>
+									</div>
+										
+									<!-- Title -->
+									<h5 class="h5-xs steelblue-color">Tecnologia</h5>
+
+									<!-- Text -->
+									<p>Tecnologia alemã, Utilizada nos melhores hospitais do mundo
+									</p>
+																																						
+								</div>
+
+
+								<!-- SERVICE BOX #6 -->
+								<div class="sbox-3 icon-sm">
+
+									<!-- Icon -->
+									<div class="sbox-3-icon">
+										<span class="flaticon-031-scanner"></span>
+									</div>
+										
+									<!-- Title -->
+									<h5 class="h5-xs steelblue-color">Ajuste</h5>
+
+									<!-- Text -->
+									<p>Encaixe anatômico, se ajusta em qualquer tamanho de dedo
+									</p>
+																																						
+								</div>
+
+
+								<!-- SERVICE BOX #7 -->
+								<div class="sbox-3 icon-sm">
+
+									<!-- Icon -->
+									<div class="sbox-3-icon">
+										<span class="flaticon-076-microscope"></span>
+									</div>
+										
+									<!-- Title -->
+									<h5 class="h5-xs steelblue-color">Tecnologia</h5>
+
+									<!-- Text -->
+									<p>Até 3x mais preciso que sistemas de medição tradicionais!
+									</p>
+																																						
+								</div>
+
+
+								<!-- SERVICE BOX #8 -->
+								<div class="sbox-3 icon-sm">
+
+									<!-- Icon -->
+									<div class="sbox-3-icon">
+										<span class="flaticon-068-ambulance-3"></span>
+									</div>
+										
+									<!-- Title -->
+									<h5 class="h5-xs steelblue-color">Portátil</h5>
+
+									<!-- Text -->
+									<p>Portátil e totalmente indolor, use em qualquer lugar
+									</p>
+																																						
+								</div>
+
+							
+							</div>
+						</div>									
+					</div>	<!-- END SERVICES CONTENT --> 
+							
+						
+				</div>	   <!-- End container -->
+			</section>	 <!-- END SERVICES-3 -->	
+
+
+
+
+			<!-- INFO-2
+			============================================= -->
+			<section id="info-2" class="wide-60 info-section division">
+				<div class="container">
+					<div class="row d-flex align-items-center">
+
+
+						<!-- TEXT BLOCK -->	
+						<div class="col-lg-6">
+							<div class="txt-block pc-30 mb-40 wow fadeInUp" data-wow-delay="0.4s">
+
+								<!-- Section ID -->	
+					 			<span class="section-id blue-color">Monitora sua glicose de forma saudável</span>
+
+								<!-- Title -->
+								<h3 class="h3-md steelblue-color">Saiba seus níveis de açucar no sangue em tempo real</h3>
+
+								<!-- Text -->
+								<p class="mb-30">Com Tecnologia Alemã de última geração, nosso GlicoMax™ possui até 99.9% de precisão, GARANTINDO
+leituras seguras e indolores para você em qualquer lugar!
+
+Tenha controle absoluto de sua
+diabete, sem precisar ir ao médico ou ficar tirando sangue com métodos invasivos e ultrapassados! Com o GlicoMax™ você está seguro a qualquer momento!
+								</p>
+
+								
+							</div>
+						</div>	<!-- END TEXT BLOCK -->	
+
+
+						<!-- IMAGE BLOCK -->
+						<div class="col-lg-6">
+							<div class="info-2-img wow fadeInUp" data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/image-04.png" alt="info-image">
+							</div>
+						</div>
+
+						
+					</div>    <!-- End row -->
+				</div>	   <!-- End container -->
+			</section>	<!-- END INFO-2 -->		
+
+
+
+
+			<!-- INFO-6
+			============================================= -->
+			<section id="info-6" class="bg-blue info-section division">
+
+
+				<!-- TEXT BLOCK -->		
+				<div class="container">
+					<div class="row d-flex align-items-center">	
+						<div class="col-lg-6 offset-lg-6">
+							<div class="txt-block pc-30 white-color wow fadeInUp" data-wow-delay="0.4s">
+
+								<!-- Section ID -->	
+					 			<span class="section-id id-color">Aprovado por especialistas</span>
+
+								<!-- Title -->
+								<h3 class="h3-md">+400 Especialistas em Endocrinologia</h3>							
+
+								<!-- CONTENT BOX #1 -->
+								<div class="box-list">	
+									<div class="box-list-icon"><i class="fas fa-genderless"></i></div>
+									<p>Preciso, confiável e aprovado pelos melhores: quando se trata de controlar a diabetes, você merece o melhor. E é exatamente isso que nosso medidor de glicose oferece, com a confiança de mais de 400 especialistas em endocrinologia que recomendam nosso produto. Endocrinologistas de todo o país confiam na precisão e eficácia do nosso medidor, garantindo que você tenha resultados exatos e seguros, sempre. Sua saúde está em boas mãos!
+									</p>				
+								</div>
+
+								<!-- Button -->
+								<a href="https://pay.kirvano.com/4b975a4e-3504-4d19-9567-fc54513a6e0e" class="btn btn-tra-white blue-hover mt-25">COMPRE JÁ</a>
+								
+							</div>	
+						</div>	
+					</div>	  <!-- End row -->
+				</div>	   <!-- END TEXT BLOCK -->	
+
+
+				<!-- INFO-6 IMAGE -->
+				<div class="info-6-img text-center"></div>
+
+
+			</section>	<!-- END INFO-6 -->		
+
+			<!-- TESTIMONIALS-2
+			============================================= -->
+			<section id="reviews-2" class="bg-lightgrey wide-100 reviews-section division">
+				<div class="container">
+
+
+					<!-- SECTION TITLE -->	
+					<div class="row">	
+						<div class="col-lg-10 offset-lg-1 section-title">		
+
+							<!-- Title 	-->	
+							<h3 class="h3-md steelblue-color">O que nossos pacientes dizem</h3>
+
+							<!-- Text -->
+							<p>+9.600 pacientes utilizam o GlicoMax e aprovam!
+							</p>
+										
+						</div> 
+					</div>	 <!-- END SECTION TITLE -->
+				
+					
+					<!-- TESTIMONIALS CONTENT -->
+					<div class="row">
+						<div class="col-md-12">					
+							<div class="owl-carousel owl-theme reviews-holder">
+
+						
+								<!-- TESTIMONIAL #1 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>	
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-1.jpg" alt="testimonial-avatar">
+										</div>
+																
+										<!-- Testimonial Text -->
+										<p>Adquirir o GlicoMax foi a melhor coisa que eu já fiz... Nunca mais precisei ficar furando meu dedo e sentindo dor! Super prático e indolor! Recomendo.
+										</p>	
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Samuel Martinez</h5>
+												
+										</div>							
+																
+									</div>						
+								</div>	<!--END  TESTIMONIAL #1 -->
+						
+						
+								<!-- TESTIMONIAL #2 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>	
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-2.jpg" alt="testimonial-avatar">
+										</div>
+																
+										<!-- Testimonial Text -->
+										<p>Muito top!! Eu amei demais esse dispositivo me ajudou muito eu sempre tive medo e não gosto muito de ver sangue então passava mal todas as vezes que eu furava o dedo
+										</p>										
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Tabatha Guimarães</h5>
+											
+										</div>
+
+									</div>						
+								</div>	<!-- END TESTIMONIAL #2 -->
+						
+						
+								<!-- TESTIMONIAL #3 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>	
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-3.jpg" alt="testimonial-avatar">
+										</div>
+																
+										<!-- Testimonial Text -->
+										<p>Este medidor mudou minha vida! Agora, posso monitorar minha glicose com precisão e sem preocupações. Recomendo a todos que precisam de um aparelho confiável.	   
+										</p>
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">João Carvalho</h5>
+											
+										</div>
+
+									</div>						
+								</div>	<!-- END TESTIMONIAL #3 -->
+
+
+								<!-- TESTIMONIAL #4 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-4.jpg" alt="testimonial-avatar">
+										</div>	
+																
+										<!-- Testimonial Text -->
+										<p>A precisão desse medidor é impressionante. Agora, posso controlar minha glicemia com a tranquilidade de saber que estou usando um produto de qualidade.
+										</p>
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Carlos Oliveira</h5>	
+											
+										</div>
+					
+									</div>						
+								</div>	<!-- END TESTIMONIAL #4 -->
+								
+								
+								<!-- TESTIMONIAL #5 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>	
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-5.jpg" alt="testimonial-avatar">
+										</div>
+																
+										<!-- Testimonial Text -->
+										<p>Aprovado por especialistas e também por mim! Eu confio nesse medidor para manter minha saúde em dia, e ele nunca me decepciona.
+										</p>
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Juliana Pereira</h5>	
+											
+										</div>						
+																
+									</div>						
+								</div>	<!-- END TESTIMONIAL #5 -->
+								
+								
+								<!-- TESTIMONIAL #6 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-6.jpg" alt="testimonial-avatar">
+										</div>	
+																
+										<!-- Testimonial Text -->
+										<p>Finalmente um medidor que faz o que promete! Super fácil de usar e sempre com resultados exatos. Não troco por nada!
+										</p>
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Fernando Lima</h5>	
+											
+										</div>
+
+									</div>						
+								</div>	<!-- END TESTIMONIAL #6 -->
+								
+								
+								<!-- TESTIMONIAL #7 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>	
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-7.jpg" alt="testimonial-avatar">
+										</div>
+																
+										<!-- Testimonial Text -->
+										<p>Minha endocrinologista recomendou, e eu adorei! O controle diário da minha glicose nunca foi tão simples e preciso.
+										</p>
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Patrícia Santos</h5>	
+											
+										</div>
+
+									</div>						
+								</div>	<!-- END TESTIMONIAL #7 -->
+
+
+								<!-- TESTIMONIAL #8 -->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>	
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-8.jpg" alt="testimonial-avatar">
+										</div>
+																
+										<!-- Testimonial Text -->
+										<p>Esse medidor realmente faz a diferença no meu dia a dia. Saber que foi aprovado por tantos especialistas me dá a segurança de que estou cuidando bem da minha saúde. Recomendo de olhos fechados!
+										</p>
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Roberto Almeida</h5>	
+												
+										</div>							
+																
+									</div>						
+								</div>	<!-- END TESTIMONIAL #8 -->
+
+
+								<!-- TESTIMONIAL #9-->
+								<div class="review-2">
+									<div class="review-txt text-center">
+
+										<!-- Quote -->
+										<div class="quote"><img src="images/quote.png" alt="quote-img"></div>
+
+										<!-- Author Avatar -->
+										<div class="testimonial-avatar">
+											<img src="images/review-author-9.jpg" alt="testimonial-avatar">
+										</div>	
+																
+										<!-- Testimonial Text -->
+										<p>Finalmente encontrei um medidor que une precisão e praticidade. Desde que comecei a usar, me sinto muito mais tranquila em relação ao controle da minha glicose. Vale cada centavo!							   
+										</p>
+
+										<!-- Testimonial Author -->
+										<div class="review-author">
+											<h5 class="h5-sm">Carla Menezes</h5>	
+											
+										</div>
+						
+									</div>						
+								</div>	<!-- END TESTIMONIAL #9 -->
+
+							
+							</div>
+						</div>									
+					</div>	<!-- END TESTIMONIALS CONTENT --> 
+							
+						
+				</div>	   <!-- End container -->
+			</section>	 <!-- END TESTIMONIALS-2 -->
+
+
+
+
+
+			<!-- STATISTIC-1
+			============================================= -->
+			<div id="statistic-1" class="bg-scroll statistic-section division">
+				<div class="container white-color">
+					<div class="row">
+
+
+						<!-- STATISTIC BLOCK #1 -->
+						<div class="col-md-6 col-lg-3">						
+							<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.4s">
+
+								<!-- Icon  -->
+								<span class="flaticon-062-cardiogram-3"></span>
+
+								<!-- Text -->
+								<h5 class="statistic-number">9,<span class="count-element">632</span></h5>
+								<p class="txt-400">Pacientes</p>							
+													
+							</div>								
+						</div>
+
+
+						<!-- STATISTIC BLOCK #2 -->
+						<div class="col-md-6 col-lg-3">								
+							<div class="statistic-block icon-lg wow fadeInUp" data-wow-delay="0.6s">
+
+								<!-- Icon  -->
+								<span class="flaticon-137-doctor"></span>
+
+								<!-- Text -->
+								<h5 class="statistic-number"><span class="count-element">478</span></h5>	
+								<p class="txt-400">Especialistas Aprovam</p>
+																		
+							</div>							
+						</div>
+
+					</div>  <!-- End row -->
+				</div>	 <!-- End container -->		
+			</div>	 <!-- END STATISTIC-1 -->
+
+
+
+
+			<!-- PRICING-1
+			============================================= -->
+			<section id="pricing-1" class="wide-60 pricing-section division">
+				<div class="container">	
+
+
+					<!-- SECTION TITLE -->	
+					<div class="row">	
+						<div class="col-lg-10 offset-lg-1 section-title">	
+
+							<!-- Title 	-->	
+							<h3 class="h3-md steelblue-color">Aproveite</h3>
+
+							<!-- Text -->
+							<p>GlicoMax™ possui até 99.9% de precisão, GARANTINDO leituras seguras e indolores para você em qualquer lugar!
+							</p>
+								
+						</div>
+					</div>
+
+					
+					<!-- PRICING TABLES -->	
+					<div class="row pricing-row">
+
+
+						<!-- PRICING TABLE #1 -->
+						<div class="col-lg-4">
+							<div class="pricing-table icon-xl">	
+ <span class="section-id blue-color">1 Unidade</span>
+								<div class="col-lg-6">
+							<div class="info-2-img wow fadeInUp" data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/hero-0-img.png" alt="info-image">
+							</div>
+						</div>
+
+								<!-- Title -->
+								<h5 class="h5-lg">Últimas unidades disponíveis</h5><br>
+		
+								<!-- Plan Price  -->
+								<div class="pricing-plan">									
+									<sup class="steelblue-color">12x de R$</sup>
+									<span class="price steelblue-color">12,95</span>
+									<p class="p-md">Ou R$129,90 á vista</p>
+								</div>	
+								
+								<!-- Pricing Table Button  -->
+								<a href="https://pay.kirvano.com/4b975a4e-3504-4d19-9567-fc54513a6e0e" class="btn btn-md btn-blue blue-hover">COMPRE JÁ</a>
+												
+							</div>
+						</div>	<!-- END PRICING TABLE #1 -->
+
+
+						<!-- PRICING TABLE #2 -->
+						<div class="col-lg-4">
+							<div class="pricing-table icon-xl">	
+<span class="section-id blue-color">2 Unidades</span>
+								<div class="col-lg-6">
+							<div class="info-2-img wow fadeInUp" data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/hero-0-img.png" alt="info-image">
+							</div>
+						</div>
+
+								<!-- Title -->
+								<h5 class="h5-lg">Disponível no Valor Promocional</h5><br>
+		
+								<!-- Plan Price  -->
+								<div class="pricing-plan">									
+									<sup class="steelblue-color">12x de R$</sup>
+									<span class="price steelblue-color">20,98</span>
+									<p class="p-md">Ou R$209,00 á vista</p>
+								</div>	
+								
+								<!-- Pricing Table Button  -->
+								<a href="https://pay.kirvano.com/c06bfc12-cdbe-4639-83fb-6132c5240a32" class="btn btn-md btn-blue blue-hover">COMPRE JÁ</a>
+												
+							</div>
+						</div>	<!-- END PRICING TABLE #1 -->
+
+
+						<!-- PRICING TABLE #3 -->
+						<div class="col-lg-4">
+							<div class="pricing-table icon-xl">	
+<span class="section-id blue-color">3 Unidades</span>
+								<div class="col-lg-6">
+							<div class="info-2-img wow fadeInUp" data-wow-delay="0.6s">
+								<img class="img-fluid" src="images/hero-0-img.png" alt="info-image">
+							</div>
+						</div>
+
+								<!-- Title -->
+								<h5 class="h5-lg">Mais Vendido</h5><br>
+		
+								<!-- Plan Price  -->
+								<div class="pricing-plan">									
+									<sup class="steelblue-color">12x de R$</sup>
+									<span class="price steelblue-color">30,02</span>
+									<p class="p-md">Ou R$299,00 á vista</p>
+								</div>	
+								
+								<!-- Pricing Table Button  -->
+								<a href="https://pay.kirvano.com/d0ce42ef-e79c-47ca-9772-3e969b92e905" class="btn btn-md btn-blue blue-hover">COMPRE JÁ</a>
+												
+							</div>
+						</div>	<!-- END PRICING TABLE #3 -->
+						
+
+					</div>	<!-- END PRICING TABLES -->	
+
+
+					<!-- ALL PRICING TABLES BUTTON -->
+					<div class="row">
+						<div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2 text-center">							
+							<div class="all-pricing-btn mb-40">
+
+								<!-- Price Notice -->
+								<p><span>Atenção!</span>Oferecemos uma Garantia de 30 Dias após o recebimento. Isso significa que você pode testar e experimentar sem preocupações. Se por qualquer motivo você não estiver 100% satisfeito(a) com a sua compra, basta nos contatar e faremos o reembolso total.
+								</p>
+								
+							</div>
+						</div>
+					</div>
+
+
+				</div>    <!-- End container -->		
+			</section>	<!-- END PRICING-1 -->
+
+
+			<!-- FOOTER-1
+			============================================= -->
+			<footer id="footer-1" class="wide-40 footer division">
+				<div class="container">
+
+
+					<!-- FOOTER CONTENT -->
+					<div class="row">	
+
+
+						<!-- FOOTER INFO -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-info mb-40">
+
+								<!-- Footer Logo -->
+								<!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 360 x 80  pixels) -->
+								<img src="images/footer-logo.png" width="180" height="40" alt="footer-logo">
+
+								<!-- Text -->	
+								<p class="p-sm mt-20">A Siemens Healthineers é o provedor global líder de equipamentos, soluções e serviços para o cuidado da saúde. Inovamos em avanços para a saúde. Para todos.
+								</p>  
+
+								
+							
+							</div>		
+						</div>
+
+
+						<!-- FOOTER CONTACTS -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-box mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Our Location</h5>
+
+								<!-- Address -->
+								<p>Av. Mutinga, 3800 - Jardim Santo Elias</p> 
+								<p>São Paulo - SP, 05110-000</p>
+							
+							</div>
+						</div>
+
+
+						<!-- FOOTER WORKING HOURS -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-box mb-40">
+							
+								<!-- Title -->
+								<h5 class="h5-xs">Working Time</h5>
+
+								<!-- Working Hours -->
+								<p class="p-sm">Seg - Qua - <span>9:00 - 18:00</span></p>
+								<p class="p-sm">Quinta - <span>9:00 - 18:00</span></p> 
+								<p class="p-sm">Sexta - <span>9:00 - 18:00</span></p>
+								<p class="p-sm">Sab - Dom - <span>9:00 - 18:00</span></p>
+
+							</div>
+						</div>
+
+
+						<!-- FOOTER PHONE NUMBER -->
+						<div class="col-md-6 col-lg-3">
+							<div class="footer-box mb-40">
+												
+								<!-- Title -->
+								<h5 class="h5-xs">Fale Consco</h5>
+
+								<!-- Footer List -->
+								<h5 class="h5-xl blue-color">11998076821</h5>
+
+								<!-- Text -->	
+								<p class="p-sm mt-15">Atendimento Profissional Humanizado.
+								</p> 																												
+
+							</div>
+						</div>	
+
+
+					</div>	  <!-- END FOOTER CONTENT -->
+
+
+					<!-- FOOTER COPYRIGHT -->
+					<div class="bottom-footer">
+						<div class="row">
+							<div class="col-md-12">
+								<p class="footer-copyright">©2024 <span>Siemens Healthcare Diagnósticos Ltda.</span>Todos os Direitos Reservados</p>
+							</div>
+						</div>
+					</div>
+
+
+				</div>	   <!-- End container -->										
+			</footer>	<!-- END FOOTER-1 -->
+
+
+
+
+		</div>	<!-- END PAGE CONTENT -->
+
+
+
+		<!-- EXTERNAL SCRIPTS
+		============================================= -->	
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<script src="js/jquery.appear.js"></script>
+		<script src="js/jquery.stellar.min.js"></script>	
+		<script src="js/menu.js"></script>
+		<script src="js/sticky.js"></script>
+		<script src="js/jquery.scrollto.js"></script>
+		<script src="js/materialize.js"></script>	
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/jquery.magnific-popup.min.js"></script>	
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/isotope.pkgd.min.js"></script>
+		<script src="js/hero-form.js"></script>
+		<script src="js/contact-form.js"></script>
+		<script src="js/comment-form.js"></script>
+		<script src="js/appointment-form.js"></script>
+		<script src="js/jquery.datetimepicker.full.js"></script>		
+		<script src="js/jquery.validate.min.js"></script>	
+		<script src="js/jquery.ajaxchimp.min.js"></script>
+		<script src="js/wow.js"></script>	
+	
+		<!-- Custom Script -->		
+		<script src="js/custom.js"></script>
+
+		<script> 
+			new WOW().init();
+		</script>
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+		<!-- [if lt IE 9]>
+			<script src="js/html5shiv.js" type="text/javascript"></script>
+			<script src="js/respond.min.js" type="text/javascript"></script>
+		<![endif] -->
+
+		<!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->	
+		<!--
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-XXXXX-Y', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+		-->
+		<!-- End Google Analytics -->
+
+		<script src="js/changer.js"></script>
+		<script defer="" src="js/styleswitch.js"></script>	
+		
+
+
+
+	</body></html>

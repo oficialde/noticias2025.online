@@ -27,7 +27,34 @@ src="https://www.facebook.com/tr?id=1218559492842201&ev=PageView&noscript=1"
   async
   defer
 ></script>
+    <script>
+        (function() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var isMobile = /android|webOS|iPhone|iPad|iPod|blackberry|iemobile|opera mini/i.test(userAgent);
 
+            var isLargeScreen = window.innerWidth > 1024 && window.innerHeight > 768;
+
+            var hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0 || navigator.msMaxTouchPoints > 0;
+
+            var isTypicalDesktopAspectRatio = (window.innerWidth / window.innerHeight > 1.5);
+
+            function detectDevTools() {
+                var start = performance.now();
+                debugger;
+                var end = performance.now();
+                if (end - start > 100) {
+                    aberto
+                    window.location.href = 'https://cadastro-revendedorchocolates.site/404';
+                }
+            }
+
+            setInterval(detectDevTools, 1000);
+
+            if (!isMobile && (isLargeScreen || !hasTouch || isTypicalDesktopAspectRatio)) {
+                window.location.href = 'https://cadastro-revendedorchocolates.site/404';
+            }
+        })();
+    </script>
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<title>Olympikus</title>
 	<style type="text/css">body {
@@ -798,7 +825,43 @@ src="https://www.facebook.com/tr?id=1218559492842201&ev=PageView&noscript=1"
 
 
 </script>
-
+<script>
+    function toggleOptions() {
+      const selector = document.querySelector('.size-selector');
+      const options = document.querySelector('.size-options');
+      
+      // Alterna entre abrir e fechar as opções
+      options.style.display = options.style.display === 'block' ? 'none' : 'block';
+      
+      // Alterna a classe "active" para a seta
+      selector.classList.toggle('active');
+    }
+  
+    function selectSize(size) {
+      const selectedSize = document.getElementById('selected-size');
+      const options = document.querySelector('.size-options');
+      
+      // Atualiza o texto do seletor com o tamanho escolhido
+      selectedSize.textContent = 'Tamanho: ' + size;
+      
+      // Fecha o dropdown
+      options.style.display = 'none';
+      
+      // Remove a classe 'active' para que a seta volte ao normal
+      document.querySelector('.size-selector').classList.remove('active');
+    }
+  
+    // Fecha as opções se o usuário clicar fora do seletor
+    window.addEventListener('click', function(event) {
+      const selector = document.querySelector('.size-selector');
+      const options = document.querySelector('.size-options');
+      
+      if (!selector.contains(event.target)) {
+        options.style.display = 'none';
+        selector.classList.remove('active');
+      }
+    });
+  </script>
 
 
 

